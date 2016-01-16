@@ -206,6 +206,15 @@ The end user may see the word "Color", but the word I see is : `{{ translations.
 
 Make it easy for you merchant to change "Save" to "You save:".
 
+### Unsolicited advice
+
+Why would I use Shopify?
+  - From a freelancer perspective: 
+    - they do the file hosting.  I used to do this. It suuuucks.
+    - they do the security: don't handle it yourself, don't rely on an open source plugin 
+    - they have technical support who will answer the phone instead of you at 3am to 
+  explain how to add back a bunch of product they deleted.
+
 ## Where to go next?
 
 - Partners program
