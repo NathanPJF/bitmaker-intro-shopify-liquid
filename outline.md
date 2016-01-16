@@ -9,8 +9,8 @@
 
 2. Focus of presentation
   * Theme development in Shopify
-  * An introduction to Liquid
   * Design and best practice for commerce sites
+  * An introduction to Liquid  
   * Demonstrations, code samples
   * Workflow, GitHub, Tools
   * Where do I go from here?
@@ -20,6 +20,13 @@
   
 4. Design Patterns that make big impacts on conversions
 
+X. Where to go next?
+
+## What is Shopify?
+
+Take screenshots from shopify.com - showing POS, showing storefronts 
+
+Who uses it? Small mom and pop shops. Enterprise. Kayne West.
 
 ## Design for ecommerce
 
@@ -115,7 +122,101 @@ Thinking of flow:
 3. 404 page 
   - what do you do when someone enters in the wrong URL?
   - Immediate redirect? Guess what they wanted to see? Offer suggestions? 
+  - Examples: http://theme-docs.myshopify.com/pages/404
 
 
   
 ## Design Patterns that make big impacts on conversions
+
+
+## Introduction to Liquid
+
+* Objects
+* Filters
+
+### Communicating with the database
+
+- How to get info on the product? What's a variant?
+- What about collections?
+
+### Folder structure
+
+Shopify has a "flat" folder structure.  It's simple which is a pro and a con.  
+If you're coming from a background where you have experience with WordPress, or other CMS, 
+you may be used to having more control over the folder structure.  Well, you're not 
+out of luck, but I'll talk more about that later. (Dev tools, Grunt and Gulp, ThemeKit)
+
+
+#### Snippets
+
+Including small bits of code.  You can use and repurpose.
+
+Show how to use "with" and a chain of variables.
+
+### Assets
+
+If you append `.liquid` to css, scss, and js assets, you can use liquid.
+
+You won't have access to objets though.  Why?  Because it doesn't really make sense.  If I'm 
+on the homepage and you have a liquid object that says `product.title` in the css - that 
+doesn't mean anything in this context.
+
+What you _do_ have access to are filters and theme tags - so you can assign variables with 
+liquid if you'd like.  But what I feel is more important, is that you have access to 
+**theme settings**.
+
+### Config 
+
+Set theme settings.
+
+## Demonstrations, code samples
+
+### Ajax
+
+* How to use ajax api
+* Ajax wrapper we provide, alternatives, build your own
+
+* I don't want to use forms.  Those are for old people! Sure, use ajax, but - 
+you want to have a form fallback for times when they have JS turned off, or a third-party 
+overwrites your jQuery object.
+
+### Theme settings
+
+* You are building sites for a _client_.  Make it easy for them to use... and very hard 
+for them to **break**.
+* Don't hardcode, make theme settings.
+
+Show how to make theme settings:
+- Change a hard coded collection on the homepage to use a collection 
+from theme settings.
+- Make a top bar for the website that will take HTML.
+  - How can this be improved? Maybe have a section just for text and a section just for a button?
+- Create a slider on a About us page.
+  - Don't have a bunch of if-statements and hardcoded text - show example of a slide show with 
+  four if statements.
+  - Have a for-loop that loops through a finite amount of iterations and capture and assign variables.
+
+### Translations
+
+Is the color you see the same color I see? Kenau Reeves meme.
+
+The answer: No.
+
+The end user may see the word "Color", but the word I see is : `{{ translations.en.color_label}}`.
+
+Make it easy for you merchant to change "Save" to "You save:".
+
+## Where to go next?
+
+- Partners program
+  - Playground
+  - Make money 
+    - referrals 
+    - rev sharing
+  
+- Resources
+  - Shopify's manual
+  - The forum 
+  - Cheat sheet
+  - Podcasts: Unofficial Shopify Podcast
+  - Vimeo, YouTube
