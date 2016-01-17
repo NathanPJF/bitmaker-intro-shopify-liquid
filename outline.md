@@ -28,6 +28,14 @@ Take screenshots from shopify.com - showing POS, showing storefronts
 
 Who uses it? Small mom and pop shops. Enterprise. Kayne West.
 
+### channels
+
+* There 6 different channels available to merchants (show screenshots of all)
+ - Online store (our focus today)
+ - Point of sale (POS)
+ - Pinterest (buyable pins)
+ - 
+
 ## Design for ecommerce
 
 ### Transactional vs Static
@@ -129,6 +137,7 @@ Thinking of flow:
 ## Design Patterns that make big impacts on conversions
 
 
+
 ## Introduction to Liquid
 
 * Objects
@@ -171,6 +180,22 @@ Set theme settings.
 
 ## Demonstrations, code samples
 
+### Alternate templates
+
+### Alternative layout
+
+* How to create and apply a new layout file.
+  * When would I do this?
+    - You want a drastically different looking page and don't want to load the header 
+    and footer of theme.liquid.
+    - You have a page that isn't going to need most of the assets loaded in theme.liquid, 
+    so you'll make a new layout file with fewer calls.
+  * I pretty much never do this though.
+    - I just use liquid control-flow tags to control  
+    - Show an example in a theme.
+
+### Dev themes 
+
 ### Ajax
 
 * How to use ajax api
@@ -179,6 +204,18 @@ Set theme settings.
 * I don't want to use forms.  Those are for old people! Sure, use ajax, but - 
 you want to have a form fallback for times when they have JS turned off, or a third-party 
 overwrites your jQuery object.
+
+
+### Line item properties
+
+
+### Cart attributes
+
+- Save a cart attribute with a jQuery date picker.
+- http://earthbloom.co.nz/cart 
+
+- Save cart attributes in the background with Ajax.
+- 
 
 ### Theme settings
 
@@ -206,7 +243,20 @@ The end user may see the word "Color", but the word I see is : `{{ translations.
 
 Make it easy for you merchant to change "Save" to "You save:".
 
-### Unsolicited advice
+### Modifying checkout
+
+### Thank you page
+
+* Give demo of using content for scripts
+  * Give a video 
+  * Give a product link **if a certain product isn't in the cart already**.
+
+### Checkout.liquid 
+
+* Plus only - get a lot more control 
+
+
+## Unsolicited advice
 
 Why would I use Shopify?
   - From a freelancer perspective: 
@@ -215,6 +265,25 @@ Why would I use Shopify?
     - they have technical support who will answer the phone instead of you at 3am to 
   explain how to add back a bunch of product they deleted.
 
+## Workflow, GitHub, Tools
+
+### Theme Kit
+
+* Where to find it
+* How to install it
+* Demo of how to use it, pushing up to a dev theme and then the live theme.
+  - I actually don't do this step for actual clients.  I give them a dev theme they 
+  can switch to.  Why? In case there's a problem, in my control or not, then can 
+  have something to roll back to.
+
+### GitHub, Beanstalk
+
+### Gulp, Grunt
+
+* Show how we work on Shopify Themes 
+* Show task runners like Gulp and Grunt
+* Give a simple demo of what Grunt is
+
 ## Where to go next?
 
 - Partners program
@@ -222,6 +291,11 @@ Why would I use Shopify?
   - Make money 
     - referrals 
     - rev sharing
+
+> Show screenshot of Design Experts page for Toronto  
+
+- I only talked about theme customization but maybe you like **Apps**.
+  - Show that access in Partners portal
   
 - Resources
   - Shopify's manual
@@ -229,3 +303,21 @@ Why would I use Shopify?
   - Cheat sheet
   - Podcasts: Unofficial Shopify Podcast
   - Vimeo, YouTube
+
+
+
+## More advanced topics
+
+### Apps 
+
+* Automatically give a free product.
+ - Touch on apps, here. There are apps for bundling 
+ - https://apps.shopify.com/product-bundles
+
+* Recommended products app: so many, they do different things.
+
+### Metafields
+
+* What are they?
+* What are they good for?
+  
