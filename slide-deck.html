@@ -14,11 +14,11 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/styles/reveal.css">
+		<link rel="stylesheet" href="dist/styles/black.css" id="theme">
 
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="dist/styles/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -379,8 +379,8 @@ Reveal.addEventListener( 'customevent', function() {
 
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="dist/scripts/head.min.js"></script>
+		<script src="dist/scripts/reveal.js"></script>
 
 		<script>
 
@@ -396,12 +396,12 @@ Reveal.addEventListener( 'customevent', function() {
 
 				// Optional reveal.js plugins
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'dist/scripts/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'dist/scripts/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'dist/scripts/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'dist/scripts/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'dist/scripts/zoom.js', async: true },
+					{ src: 'dist/scripts/notes.js', async: true }
 				]
 			});
 
