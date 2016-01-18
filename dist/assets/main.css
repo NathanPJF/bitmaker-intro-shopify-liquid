@@ -1,0 +1,19 @@
+/*
+===================
+   1.0 MIXINS
+===================
+*/
+.class {
+  border-radius: 50%;
+}
+.class h1 {
+  color: black;
+  -webkit-transition: 1s all;
+          transition: 1s all;
+}
+
+.intro {
+  background-size: cover;
+  background-position: center;
+  background-image: url("dog.png");
+}

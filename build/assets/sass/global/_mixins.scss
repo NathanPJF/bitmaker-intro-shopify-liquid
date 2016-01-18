@@ -1,0 +1,15 @@
+/*
+===================
+   1.0 MIXINS
+===================
+*/
+
+@mixin background-image($url) {
+  background-size: cover;
+  background-position: center;
+  background-image: url($url);
+}
+
+@mixin border-radius($radius: 3px) {
+  border-radius: $radius;
+}
