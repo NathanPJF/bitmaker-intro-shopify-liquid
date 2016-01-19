@@ -48,7 +48,8 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {                         // Dictionary of files
-          '../dist/assets/main.css': 'assets/sass/styles.scss',       // 'destination': 'source'
+          // 'destination': 'source'
+          '../dist/assets/main.css': 'assets/sass/styles.scss',
           '../dist/styles/reveal.css': 'assets/sass/vendor/reveal/reveal.scss',
           '../dist/styles/paper.css': 'assets/sass/vendor/reveal/print/paper.css',
           '../dist/styles/pdf.css': 'assets/sass/vendor/reveal/print/pdf.css',
@@ -64,7 +65,41 @@ module.exports = function(grunt) {
         src: [ '**/*.css' ],
         dest: '../dist/'
       }
-    }
+    },
+    imagemin: {                          // Task
+      dynamic: {                         // Another target
+        options: {                       // Target options
+          optimizationLevel: 3,
+        },
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: 'assets/img/',            // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+          dest: '../dist/images/'        // Destination path prefix
+        }]
+      },
+      trial: {                         // Another target
+        options: {                       // Target options
+          optimizationLevel: 7
+        },
+        files: {
+          '../dist/images/library.png' : 'assets/img/ottawa/library.png'
+        }
+      }
+    },
+    watch: {
+      sass: {
+        // We watch and compile sass files as normal but don't live reload here
+        files: ['**/*.scss'],
+        tasks: ['sass','autoprefixer'],
+      },
+      livereload: {
+        // Here we watch the files the sass task will compile to
+        // These files are sent to the live reload server after sass compiles to them
+        options: { livereload: true },
+        files: ['dest/**/*'],
+      },
+    },
   });
 
   // Load tasks
@@ -72,6 +107,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-zip');
 
   // Register tasks
@@ -80,7 +117,6 @@ module.exports = function(grunt) {
     'Compiles the stylesheets.',
     [ 'sass','autoprefixer' ]
   );
-  grunt.registerTask('default', ['stylesheets']);
 
   grunt.registerTask(
     'copy:assets',
@@ -93,6 +129,8 @@ module.exports = function(grunt) {
     'Compiles all of the assets and copies the files to the build directory.',
     [ 'clean:dist','copy:assets', 'stylesheets' ]
   );
+
+  grunt.registerTask('default', ['watch']);
 
 // .module
 };

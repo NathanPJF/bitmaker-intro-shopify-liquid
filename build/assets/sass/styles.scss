@@ -1,11 +1,11 @@
-
+@import 'global/variables';
 @import 'global/mixins';
 
 .class {
   @include border-radius(50%);
   h1 {
-    color: black;
-    transition: 1s all;
+    color: $shopify_green;
+    transition: 12s all;
   }
 }
 

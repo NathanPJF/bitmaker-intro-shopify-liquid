@@ -7,9 +7,9 @@
   border-radius: 50%;
 }
 .class h1 {
-  color: black;
-  -webkit-transition: 1s all;
-          transition: 1s all;
+  color: #7ab55c;
+  -webkit-transition: 12s all;
+          transition: 12s all;
 }
 
 .intro {
