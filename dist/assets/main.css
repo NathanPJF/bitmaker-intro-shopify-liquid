@@ -63,7 +63,7 @@
 
 .reveal section, .reveal p {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #000;
+  color: #30373B;
   font-weight: 200;
 }
 
@@ -87,4 +87,10 @@
 
 body {
   background-color: #ECEDF1;
+}
+
+.slide__chapter {
+  top: 50% !important;
+  -webkit-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
 }
