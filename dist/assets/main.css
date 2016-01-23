@@ -3,17 +3,80 @@
    1.0 MIXINS
 ===================
 */
-.class {
-  border-radius: 50%;
+/* ==============
+   FONTS
+=================*/
+@font-face {
+  font-family: 'Brandon';
+  src: url("../fonts/Brandon/Brandon_txt_light.woff") format("woff"), url("../fonts/Brandon/Brandon_txt_light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
-.class h1 {
-  color: #7ab55c;
-  -webkit-transition: 12s all;
-          transition: 12s all;
+@font-face {
+  font-family: 'Brandon';
+  src: url("../fonts/Brandon/Brandon_txt_reg.woff") format("woff"), url("../fonts/Brandon/Brandon_txt_reg.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url("../fonts/Brandon/Brandon_txt_med.woff") format("woff"), url("../Brandon/Brandon_txt_med.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url("../fonts/Brandon/Brandon_txt_bld.woff") format("woff"), url("../fonts/Brandon/Brandon_txt_bld.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url("../fonts/Brandon/Brandon_txt_blk.woff") format("woff"), url("../fonts/Brandon/Brandon_txt_blk.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+.reveal h1, .reveal h2 {
+  margin: 0 0 20px 0;
+  color: #000;
+  font-family: "Brandon", Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word;
+}
+.reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  margin: 0 0 20px 0;
+  color: #000;
+  font-family: "Brandon", Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word;
 }
 
-.intro {
-  background-size: cover;
-  background-position: center;
-  background-image: url("dog.png");
+.reveal section, .reveal p {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 200;
+}
+
+.slide__chapter section, .slide__chapter h1, .slide__chapter p {
+  color: #fff;
+}
+.slide__chapter h2, .slide__chapter h3 {
+  color: #7ab55c;
+}
+
+.reveal pre code {
+  padding: 20px;
+  line-height: 1.4;
+  background-color: #fff;
+}
+
+body {
+  background-color: #ECEDF1;
 }

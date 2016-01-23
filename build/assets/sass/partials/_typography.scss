@@ -1,0 +1,38 @@
+
+// Headings
+.reveal {
+  h1, h2 {
+    @include headings(700);
+  }
+
+  h3, h4, h5, h6 {
+    @include headings(500);
+  }
+}
+
+.reveal {
+  section, p {
+    font-family: $body_font_family;
+    //color: #000;
+    font-weight: 200;
+  }
+}
+
+.slide__chapter {
+  section, h1, p {
+    color: #fff;
+  }
+
+  h2, h3 {
+    color: $brand_green;
+  }
+}
+
+//Code
+.reveal {
+  pre code {
+    padding: 20px;
+    line-height: 1.4;
+    background-color: $code_bg;
+  }
+}

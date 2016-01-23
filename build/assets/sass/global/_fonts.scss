@@ -1,39 +1,42 @@
+/* ==============
+   FONTS
+=================*/
 @font-face {
     font-family: 'Brandon';
-    src: url('Brandon_txt_light.woff') format("woff"),
-         url('Brandon_txt_light.ttf') format("truetype");
+    src: url('../fonts/Brandon/Brandon_txt_light.woff') format("woff"),
+         url('../fonts/Brandon/Brandon_txt_light.ttf') format("truetype");
     font-weight: 300;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Brandon';
-    src: url(//cdn.shopify.com/s/assets/Brandon_txt_reg-webfont-4a6ef3c8cbf0f9c07e56b9c736cb16743f52371ec25286cbcecf8552a7951d42.woff) format("woff"),
-         url(//cdn.shopify.com/s/assets/Brandon_txt_reg-webfont-c06353ee8f876513b456e8df83f2e659227159147809652beacb40d0f26cfb65.ttf) format("truetype");
+    src: url('../fonts/Brandon/Brandon_txt_reg.woff') format("woff"),
+         url('../fonts/Brandon/Brandon_txt_reg.ttf') format("truetype");
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Brandon';
-    src: url(//cdn.shopify.com/s/assets/Brandon_txt_med-webfont-040bb0ae25ad794ffa8078f9da28dc96d6386ae95b34fd1e26b91574555133da.woff) format("woff"),
-         url(//cdn.shopify.com/s/assets/Brandon_txt_med-webfont-7f5218c71cf116260d9d1c4dc2b79e6a701f6acbb282c478e7fde1275e1257ea.ttf) format("truetype");
+    src: url('../fonts/Brandon/Brandon_txt_med.woff') format("woff"),
+         url('../Brandon/Brandon_txt_med.ttf') format("truetype");
     font-weight: 500;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Brandon';
-    src: url(//cdn.shopify.com/s/assets/Brandon_txt_bld-webfont-51cbc2efe11a6bfcb16ffe667930c3d245f6c94722047581367596f0aa85c1e4.woff) format("woff"),
-         url(//cdn.shopify.com/s/assets/Brandon_txt_bld-webfont-8f495764f23ae8adc9d7a7682b9ec7202eebc2763783e241896d9ba04d0b7775.ttf) format("truetype");
+    src: url('../fonts/Brandon/Brandon_txt_bld.woff') format("woff"),
+         url('../fonts/Brandon/Brandon_txt_bld.ttf') format("truetype");
     font-weight: 700;
     font-style: normal
 }
 
 @font-face {
     font-family: 'Brandon';
-    src: url(//cdn.shopify.com/s/assets/Brandon_txt_blk-webfont-ccd6e3ef342bf7c93bcbffc95ac1b693bda0db3c2c151d56070428954d95a6db.woff) format("woff"),
-         url(//cdn.shopify.com/s/assets/Brandon_txt_blk-webfont-bae8aebc5adf1b140e1cd1c0bf152d6d432620a1253a4317044ecccc229e9d8b.ttf) format("truetype");
+    src: url('../fonts/Brandon/Brandon_txt_blk.woff') format("woff"),
+         url('../fonts/Brandon/Brandon_txt_blk.ttf') format("truetype");
     font-weight: 900;
     font-style: normal
 }

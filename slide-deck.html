@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="dist/styles/reveal.css">
 		<link rel="stylesheet" href="dist/styles/black.css" id="theme">
+		<link rel="stylesheet" href="dist/assets/main.css" id="shopify-theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="dist/styles/zenburn.css">
@@ -40,7 +41,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section class="slide__intro slide__chapter" data-background="#30373B" data-transition="slide">
 					<h1>Building with Shopify</h1>
 					<h3>Intro to Liquid and Theming</h3>
 					<br>
@@ -388,12 +389,14 @@ Reveal.addEventListener( 'customevent', function() {
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				width: 1280,
+				height: 780,
 				controls: false,
 				progress: true,
 				history: true,
-				center: true,
+				center: false,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'none', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins
 				dependencies: [

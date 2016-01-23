@@ -22,10 +22,10 @@ module.exports = function(grunt) {
       },
       reveal_css: {
         expand: true,
-        cwd : 'bower_components/reveal.js/css/',
-        src: ['print/*.css','pdf/*.css','reveal.scss','theme/source/**.*','theme/template/**.*'],
+        cwd : 'bower_components/reveal.js/',
+        src: ['css/print/*.css','css/pdf/*.css','css/reveal.scss','css/theme/source/**.*','css/theme/template/**.*','lib/css/zenburn.css'],
         dest: '../build/assets/sass/vendor/reveal/'
-      },
+      }
       reveal_font: {
         expand: true,
         cwd : 'bower_components/reveal.js/',

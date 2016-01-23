@@ -1,14 +1,12 @@
 @import 'global/variables';
 @import 'global/mixins';
+@import 'global/fonts';
 
-.class {
-  @include border-radius(50%);
-  h1 {
-    color: $shopify_green;
-    transition: 12s all;
-  }
+@import 'partials/typography';
+
+
+body {
+  background-color: $brand_white;
 }
 
-.intro {
-  @include background-image('dog.png');
-}
+@import 'partials/slides'
