@@ -22,17 +22,17 @@ module.exports = function(grunt) {
       },
       reveal_css: {
         expand: true,
-        cwd : 'bower_components/reveal.js/',
-        src: ['css/print/*.css','css/pdf/*.css','css/reveal.scss','css/theme/source/**.*','css/theme/template/**.*','lib/css/zenburn.css'],
+        cwd : 'bower_components/reveal.js/css/',
+        src: ['print/*.css','pdf/*.css','reveal.scss','theme/source/**.*','theme/template/**.*'],
+        dest: '../build/assets/sass/vendor/reveal/'
+      },
+      highlight_css: {
+        expand: true,
+        flatten: true,
+        cwd: 'bower_components/reveal.js/lib/',
+        src: ['css/zenburn.css'],
         dest: '../build/assets/sass/vendor/reveal/'
       }
-      reveal_font: {
-        expand: true,
-        cwd : 'bower_components/reveal.js/',
-        src: ['font/'],
-        dest: '../build/assets/fonts/',
-        flatten: true
-      },
     },
     clean: {
       dist: {
@@ -51,6 +51,7 @@ module.exports = function(grunt) {
           // 'destination': 'source'
           '../dist/assets/main.css': 'assets/sass/styles.scss',
           '../dist/styles/reveal.css': 'assets/sass/vendor/reveal/reveal.scss',
+          '../dist/styles/zenburn.css': 'assets/sass/vendor/reveal/zenburn.css',
           '../dist/styles/paper.css': 'assets/sass/vendor/reveal/print/paper.css',
           '../dist/styles/pdf.css': 'assets/sass/vendor/reveal/print/pdf.css',
           '../dist/styles/black.css': 'assets/sass/vendor/reveal/theme/source/black.scss',
@@ -121,7 +122,7 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'copy:assets',
     'Copy and flatten all vendor assets into dist directory.',
-    [ 'copy:reveal_js','copy:reveal_css', 'copy:reveal_font' ]
+    [ 'copy:reveal_js','copy:reveal_css', 'copy:highlight_css' ]
   );
 
   grunt.registerTask(
