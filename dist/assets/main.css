@@ -45,6 +45,7 @@
   letter-spacing: normal;
   text-shadow: none;
   word-wrap: break-word;
+  margin-bottom: 40px;
 }
 .reveal h2 {
   text-transform: none;
@@ -60,23 +61,34 @@
   word-wrap: break-word;
   text-transform: none;
 }
-
-.reveal section, .reveal p {
+.reveal p, .reveal ul, .reveal small, .reveal caption {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #30373B;
   font-weight: 200;
+  margin: 40px 0;
+}
+.reveal blockquote {
+  border: none;
+  border-left: 5px #7ab55c solid;
+  color: #30373B;
+  padding: 10px 15px;
+  background-color: #fff;
+}
+.reveal small {
+  display: block;
+  margin: 10px 0;
 }
 
 .slide__chapter h1 {
   text-transform: none;
   color: #fff;
 }
-.slide__chapter section, .slide__chapter p {
-  color: #fff;
-}
 .slide__chapter h2, .slide__chapter h3 {
   color: #7ab55c;
   text-transform: uppercase;
+}
+.slide__chapter p, .slide__chapter ul, .slide__chapter small, .slide__chapter caption {
+  color: #fff;
 }
 
 .reveal pre code {
@@ -93,4 +105,13 @@ body {
   top: 50% !important;
   -webkit-transform: translateY(-50%) !important;
           transform: translateY(-50%) !important;
+}
+
+.slide__agenda ul.agenda {
+  margin: 1em 0;
+}
+.slide__agenda ul.agenda li {
+  list-style-type: none;
+  margin-bottom: 1em;
+  text-align: center;
 }

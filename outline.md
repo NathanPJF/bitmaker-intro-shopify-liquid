@@ -17,14 +17,14 @@
 
 3. Design for ecommerce
   * How does designing a storefront defer from other websites?
-  
+
 4. Design Patterns that make big impacts on conversions
 
 X. Where to go next?
 
 ## What is Shopify?
 
-Take screenshots from shopify.com - showing POS, showing storefronts 
+Take screenshots from shopify.com - showing POS, showing storefronts
 
 Who uses it? Small mom and pop shops. Enterprise. Kayne West.
 
@@ -34,47 +34,47 @@ Who uses it? Small mom and pop shops. Enterprise. Kayne West.
  - Online store (our focus today)
  - Point of sale (POS)
  - Pinterest (buyable pins)
- - 
+ -
 
 ## Design for ecommerce
 
 ### Transactional vs Static
 
-Static could also be considered "informational".  Does your website exist to provide 
+Static could also be considered "informational".  Does your website exist to provide
 information, or is the website supposed to make some actually interact with it?
 
 Marketers will say *every* website/webpage should be driving people towards an action.  
-They aren't wrong.  Getting people to sign-up for an email list, call a phone number, 
+They aren't wrong.  Getting people to sign-up for an email list, call a phone number,
 even share content are all actions.  But we're talking about **transactions**.
 
-You want people to explore, understand the product, be engaged - either by having fun and enjoying 
+You want people to explore, understand the product, be engaged - either by having fun and enjoying
 the site or be very invested in the product's story, and finally... give you some money!
 
 > Ideas for images:
 > Show a slide with a big word in the middle with pictures around it.
 
-> - Explore: collection page, related products
+> - Explore: collection page, related products, filtering
 > - Understand: Product details tabs, video of demo, customization options
-> - Engage: Music video, customization, Instagram feed, cool picture, banner about serious story 
-> - Purchase: Add to cart button, Side cart, Thank you page, shipping notification, New Order email 
+> - Engage: Music video, customization, Instagram feed, cool picture, banner about serious story
+> - Purchase: Add to cart button, Side cart, Thank you page, shipping notification, New Order email
 > to customer
 
-### Pages and elements to consider 
+### Pages and elements to consider
 
 1. Navigation
 
 People need to browse your site and you want to make it easy.
-Do you have a mega navigation like Walmart and Best Buy?  (show screenshots)  And 
+Do you have a mega navigation like Walmart and Best Buy?  (show screenshots)  And
 can you do this better?  Make it less confusing, show products better? (Show Venture)
 
-Do you have a very simple site?  If so, do you have a navigation with just a couple 
+Do you have a very simple site?  If so, do you have a navigation with just a couple
 links in it?  Or do you do something more creative (show showcase navigation - big pop-up)
 
 > Note about navigation:
 
 > Show a picture of a site with a random icon in the top corner. Wtf is that?
 > Then show a picture of a hamburger icon in the same place.
-> The point: not everyone is coming to the table with the same background.  Not 
+> The point: not everyone is coming to the table with the same background.  Not
 > everyone knows what a hamburger menu is/represents.  It's honestly getting a bit dated.
 > Show screenshot with the hamburger icon and the word "menu" beside it.
 
@@ -82,14 +82,14 @@ links in it?  Or do you do something more creative (show showcase navigation - b
 > "A user’s understanding of an icon is based on previous experience. Due to the absence of a standard usage for most icons, text labels are necessary to communicate the meaning and reduce ambiguity."
 
 > Picture of a contact card: http://icons.iconarchive.com/icons/icons8/ios7/128/Messaging-Contact-Card-icon.png
-> What does this mean?  Contact? Account signup? Portoflio? ... 
+> What does this mean?  Contact? Account signup? Portoflio? ...
 > To understand this, you may have to know what a roll-a-dex.
 
 2. Collection page
 
 Go with a standard grid layout?  Or something more custom (Brooklyn's collage)?
 
-What should you be communicating in this grid? 
+What should you be communicating in this grid?
 * Prices - of course
 * Product name - no brainer
 * Product options like different colors?
@@ -102,10 +102,10 @@ Thinking of flow:
 
 3. Other common pages:
 
-* Home page 
-* Product pages 
-* Cart page - if you want a dedicated page 
-* Checkout page(s) 
+* Home page
+* Product pages
+* Cart page - if you want a dedicated page
+* Checkout page(s)
 * About the company / the product story
 * Contact page
 * Blog pages
@@ -113,27 +113,27 @@ Thinking of flow:
 
 ### Pages to consider you may have forgotten
 
-1. Account pages 
-- People will be placing orders and want to check back on the status of that order 
+1. Account pages
+- People will be placing orders and want to check back on the status of that order
 - See what you ordered in the past and reorder
 - Editing their shipping info that's on file (think: Amazon)
 
 
 2. Search pages
   - This is so often an after thought, but it's actually very important
-  - People sometimes don't want to go through the nav, or guess how the merchant 
+  - People sometimes don't want to go through the nav, or guess how the merchant
   labeled it.  They just want a quick search.
-  - What will your search show? Excerpt of description? Price? 
-  - What's the scope? Search everything on your site? Or maybe just the products 
+  - What will your search show? Excerpt of description? Price?
+  - What's the scope? Search everything on your site? Or maybe just the products
   to reduce noise?
 
-3. 404 page 
+3. 404 page
   - what do you do when someone enters in the wrong URL?
-  - Immediate redirect? Guess what they wanted to see? Offer suggestions? 
+  - Immediate redirect? Guess what they wanted to see? Offer suggestions?
   - Examples: http://theme-docs.myshopify.com/pages/404
 
 
-  
+
 ## Design Patterns that make big impacts on conversions
 
 
@@ -151,8 +151,8 @@ Thinking of flow:
 ### Folder structure
 
 Shopify has a "flat" folder structure.  It's simple which is a pro and a con.  
-If you're coming from a background where you have experience with WordPress, or other CMS, 
-you may be used to having more control over the folder structure.  Well, you're not 
+If you're coming from a background where you have experience with WordPress, or other CMS,
+you may be used to having more control over the folder structure.  Well, you're not
 out of luck, but I'll talk more about that later. (Dev tools, Grunt and Gulp, ThemeKit)
 
 
@@ -166,19 +166,26 @@ Show how to use "with" and a chain of variables.
 
 If you append `.liquid` to css, scss, and js assets, you can use liquid.
 
-You won't have access to objets though.  Why?  Because it doesn't really make sense.  If I'm 
-on the homepage and you have a liquid object that says `product.title` in the css - that 
+You won't have access to objets though.  Why?  Because it doesn't really make sense.  If I'm
+on the homepage and you have a liquid object that says `product.title` in the css - that
 doesn't mean anything in this context.
 
-What you _do_ have access to are filters and theme tags - so you can assign variables with 
-liquid if you'd like.  But what I feel is more important, is that you have access to 
+What you _do_ have access to are filters and theme tags - so you can assign variables with
+liquid if you'd like.  But what I feel is more important, is that you have access to
 **theme settings**.
 
-### Config 
+### Config
 
 Set theme settings.
 
 ## Demonstrations, code samples
+
+### Collection page
+
+* Using our knowledge of liquid... we're going to do a cool customization.
+* Modify venture to not how the "view" box pop up on mouse over.
+* Instead, if there's another variant image, we're going to show that.
+* And we'll get it to say how many colors it comes in.
 
 ### Alternate templates
 
@@ -186,23 +193,23 @@ Set theme settings.
 
 * How to create and apply a new layout file.
   * When would I do this?
-    - You want a drastically different looking page and don't want to load the header 
+    - You want a drastically different looking page and don't want to load the header
     and footer of theme.liquid.
-    - You have a page that isn't going to need most of the assets loaded in theme.liquid, 
+    - You have a page that isn't going to need most of the assets loaded in theme.liquid,
     so you'll make a new layout file with fewer calls.
   * I pretty much never do this though.
     - I just use liquid control-flow tags to control  
     - Show an example in a theme.
 
-### Dev themes 
+### Dev themes
 
 ### Ajax
 
 * How to use ajax api
 * Ajax wrapper we provide, alternatives, build your own
 
-* I don't want to use forms.  Those are for old people! Sure, use ajax, but - 
-you want to have a form fallback for times when they have JS turned off, or a third-party 
+* I don't want to use forms.  Those are for old people! Sure, use ajax, but -
+you want to have a form fallback for times when they have JS turned off, or a third-party
 overwrites your jQuery object.
 
 
@@ -212,24 +219,24 @@ overwrites your jQuery object.
 ### Cart attributes
 
 - Save a cart attribute with a jQuery date picker.
-- http://earthbloom.co.nz/cart 
+- http://earthbloom.co.nz/cart
 
 - Save cart attributes in the background with Ajax.
-- 
+-
 
 ### Theme settings
 
-* You are building sites for a _client_.  Make it easy for them to use... and very hard 
+* You are building sites for a _client_.  Make it easy for them to use... and very hard
 for them to **break**.
 * Don't hardcode, make theme settings.
 
 Show how to make theme settings:
-- Change a hard coded collection on the homepage to use a collection 
+- Change a hard coded collection on the homepage to use a collection
 from theme settings.
 - Make a top bar for the website that will take HTML.
   - How can this be improved? Maybe have a section just for text and a section just for a button?
 - Create a slider on a About us page.
-  - Don't have a bunch of if-statements and hardcoded text - show example of a slide show with 
+  - Don't have a bunch of if-statements and hardcoded text - show example of a slide show with
   four if statements.
   - Have a for-loop that loops through a finite amount of iterations and capture and assign variables.
 
@@ -248,21 +255,21 @@ Make it easy for you merchant to change "Save" to "You save:".
 ### Thank you page
 
 * Give demo of using content for scripts
-  * Give a video 
+  * Give a video
   * Give a product link **if a certain product isn't in the cart already**.
 
-### Checkout.liquid 
+### Checkout.liquid
 
-* Plus only - get a lot more control 
+* Plus only - get a lot more control
 
 
 ## Unsolicited advice
 
 Why would I use Shopify?
-  - From a freelancer perspective: 
+  - From a freelancer perspective:
     - they do the file hosting.  I used to do this. It suuuucks.
-    - they do the security: don't handle it yourself, don't rely on an open source plugin 
-    - they have technical support who will answer the phone instead of you at 3am to 
+    - they do the security: don't handle it yourself, don't rely on an open source plugin
+    - they have technical support who will answer the phone instead of you at 3am to
   explain how to add back a bunch of product they deleted.
 
 ## Workflow, GitHub, Tools
@@ -272,15 +279,15 @@ Why would I use Shopify?
 * Where to find it
 * How to install it
 * Demo of how to use it, pushing up to a dev theme and then the live theme.
-  - I actually don't do this step for actual clients.  I give them a dev theme they 
-  can switch to.  Why? In case there's a problem, in my control or not, then can 
+  - I actually don't do this step for actual clients.  I give them a dev theme they
+  can switch to.  Why? In case there's a problem, in my control or not, then can
   have something to roll back to.
 
 ### GitHub, Beanstalk
 
 ### Gulp, Grunt
 
-* Show how we work on Shopify Themes 
+* Show how we work on Shopify Themes
 * Show task runners like Gulp and Grunt
 * Give a simple demo of what Grunt is
 
@@ -288,18 +295,18 @@ Why would I use Shopify?
 
 - Partners program
   - Playground
-  - Make money 
-    - referrals 
+  - Make money
+    - referrals
     - rev sharing
 
 > Show screenshot of Design Experts page for Toronto  
 
 - I only talked about theme customization but maybe you like **Apps**.
   - Show that access in Partners portal
-  
+
 - Resources
   - Shopify's manual
-  - The forum 
+  - The forum
   - Cheat sheet
   - Podcasts: Unofficial Shopify Podcast
   - Vimeo, YouTube
@@ -308,10 +315,10 @@ Why would I use Shopify?
 
 ## More advanced topics
 
-### Apps 
+### Apps
 
 * Automatically give a free product.
- - Touch on apps, here. There are apps for bundling 
+ - Touch on apps, here. There are apps for bundling
  - https://apps.shopify.com/product-bundles
 
 * Recommended products app: so many, they do different things.
@@ -320,4 +327,9 @@ Why would I use Shopify?
 
 * What are they?
 * What are they good for?
-  
+
+
+## Cool real sites
+
+http://toywhale.co/
+https://suzyq.ca/pages/store

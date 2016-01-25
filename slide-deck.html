@@ -50,331 +50,348 @@
 					</p>
 				</section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+				<section class="slide__agenda">
+					<h2>Agenda</h2>
+					<ul class="agenda">
+						<li>Theme development in Shopify</li>
+						<li>Design and best practice for commerce sites</li>
+						<li>An introduction to Liquid  </li>
+						<li>Demonstrations, code samples</li>
+						<li>Workflow, GitHub, Tools</li>
+						<li>Where do I go from here?</li>
 					</ul>
 				</section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+				<section class="slide__chapter" data-background="dist/images/templates2.png">
+					<h1>
+						Design for ecommerce
+					</h1>
+					<h3>
+						Objectives and execution
+					</h3>
 
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						Not a presentation on how on web design.  I won't be talking about patterns or
+						recommending color palettes.  I will talk about more fundamental considerations
+						about designing and developing web sites meant to be storefronts.
 					</aside>
 				</section>
 
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+					<h2>Static vs Transactional</h2>
+					<p>
+						Does your website exist to just provide <em>information</em>?
+					</p>
+					<p>
+						Or are you trying to get visitors to <b>actually do something</b>?
+					</p>
+
+					<aside class="notes">
+						Static could also be considered "informational".
+						Does your website exist to provide
+						information, or is the website supposed to make some actually interact with it?
+					</aside>
 				</section>
 
 				<section>
-					<h2>Global State</h2>
+					<h2>Navigation</h2>
 					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
+						People need to navigate your site and you need to <b>make it easy</b>.
 					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					<p class="fragment">
+						Problem: What does "easy" actually mean?
 					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+					<ul class="fragment">
+						<li>Small number of links?</li>
+						<li>Lots of links with sub-navigation?</li>
+						<li>Clear language?</li>
+						<li>Use of imagery and icons?</li>
 					</ul>
+
+					<aside class="notes">
+						Does "easy" mean there's only a few options presented?
+						That there's a lot of filtering presented?
+						Are you writing the names of links in a way people understand?
+					</aside>
 				</section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
+				<section>
+					<img src="dist/images/best-buy-nav.png" alt="Best Buy navigation" class="stretch">
+
+					<aside class="notes">
+						If we look at Best Buy's navigation, would you say this is "easy"?
+
+						Well, it depends on what TYPE of store you have.  If you have a store
+						with very large inventory, this may be the appropriate type of navigation.
+						It needs to be "easy" to navigate all the product types and drill down to
+						the make and model of the item you're loking for.
+
+						Note: There's more than one navigation on a page.  I count three main navs.
+
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/best-buy-nav-highlight.png" alt="Best Buy navigation highlighted" class="stretch">
+
+					<aside class="notes">
+						Green: Navigation focused on customer accounts and those who placed orders already
+						Orange: A navigation for what we can assume Best Buy has determined what are the top
+						actions for visitors coming to the site.
+						Pink: The navigation for products and services
+
+						Important: You don't need to dump all your navigation under one hamburger menu.
+						Break it up based on action.
+
+						Best Buy is bit of an extreme example though.
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/snow-devil-nav.png" alt="Snow Devil Navigation" class="stretch">
+
+					<aside class="notes">
+						Use meganav dropdowns to show prodcuts.  Give a couple product categories.
+
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/arghenoia-nav.png" alt="Arghenoia Homepage" class="stretch">
+					<small>
+						<a href="http://www.arghenoia-shop.com/" alt="arghenoia shop">arghenoia-shop.com</a>
+					</small>
+					<aside class="notes">
+						Simpler navigation. You don't have to stick it at the top - everyone
+						does that, that's boring.
+
+						Different weights of links communicate a bit of hierarchy.
+						The stuff they want you to do is in all caps.
+						Less frequented links are in lower case.
+						And then you have account and cart icons for navigation.
+
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/letter-lights-nav.png" alt="Arghenoia Homepage" class="stretch">
+					<small>
+						<a href="http://letterlights.co.uk/" alt="letterlights. store">letterlights.co.uk</a>
+					</small>
+					<aside class="notes">
+						Carefule on using just icons for navigation.  It might not be clear
+						to people how to navigate your site if you are just going to rely
+						on icons.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Careful with icons...</h2>
+						<p>What will this link you to?</p>
+						<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 50 50">
+							<path d="M 3 7 C 1.3549372 7 0 8.3549372 0 10 L 0 42 C 0 43.645063 1.3549372 45 3 45 L 9 45 L 10 45 L 10 44 L 10 43 L 12 43 L 12 44 L 12 45 L 13 45 L 37 45 L 38 45 L 38 44 L 38 43 L 40 43 L 40 44 L 40 45 L 41 45 L 47 45 C 48.645063 45 50 43.645063 50 42 L 50 14 C 50 12.354937 48.645063 11 47 11 L 26 11 L 26 10 C 26 8.3549372 24.645063 7 23 7 L 3 7 z M 3 9 L 23 9 C 23.562937 9 24 9.4370628 24 10 L 24 12 L 24 13 L 25 13 L 47 13 C 47.562937 13 48 13.437063 48 14 L 48 42 C 48 42.562937 47.562937 43 47 43 L 42 43 L 42 42 L 42 41 L 41 41 L 37 41 L 36 41 L 36 42 L 36 43 L 14 43 L 14 42 L 14 41 L 13 41 L 9 41 L 8 41 L 8 42 L 8 43 L 3 43 C 2.4370628 43 2 42.562937 2 42 L 2 10 C 2 9.4370628 2.4370628 9 3 9 z M 13.46875 18 C 10.10975 18.064 9.7025 20.6185 10.4375 23.5625 C 10.3075 23.6455 10.10125 23.93825 10.15625 24.40625 C 10.25825 25.27825 10.5935 25.482 10.8125 25.5 C 10.8955 26.313 11.4105 27.2865 11.6875 27.4375 C 11.6875 28.0175 11.71225 28.45875 11.65625 29.09375 C 10.99225 30.95075 6.208 30.421 6 34 L 21 34 C 20.793 30.421 16.039 30.94975 15.375 29.09375 C 15.32 28.45875 15.34375 28.0175 15.34375 27.4375 C 15.61975 27.2865 16.1025 26.313 16.1875 25.5 C 16.4055 25.482 16.74275 25.27825 16.84375 24.40625 C 16.89775 23.93825 16.6925 23.67675 16.5625 23.59375 C 16.9155 22.48675 17.6375 19.0415 15.1875 18.6875 C 14.9355 18.2265 14.30675 18 13.46875 18 z M 26 22 L 26 24 L 44 24 L 44 22 L 26 22 z M 26 27 L 26 29 L 44 29 L 44 27 L 26 27 z M 26 32 L 26 34 L 44 34 L 44 32 L 26 32 z"></path>
+						</svg>
+
+						<blockquote class="fragment" data-fragment-index="1">
+							"A user’s understanding of an icon is based on <b>previous experience</b>.
+							Due to the absence of a standard usage for most icons, <b>text labels</b> are
+							necessary to communicate the meaning and reduce ambiguity."
+						</blockquote>
+						<small class="fragment" data-fragment-index="1">
+							nngroup.com/articles/icon-usability
+						</small>
+					<aside class="notes">
+						 Link to: Contact? Account signup? Portoflio?
+					</aside>
+				</section>
+
+				<section>
+					<h2>Collections</h2>
 					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+					 Show off your stuff! But how much do you show?
 					</p>
+					<ul class="fragment">
+						<li>Price</li>
+						<li>Name</li>
+						<li>Options - colors, sizes</li>
+						<li>Availability - low stock, sold out</li>
+						<li>Anything else?</li>
+					</ul>
+
+					<aside class="notes">
+						You can show all these items.  Anytinh else?
+						What about review scores? If on sale, show how much you're saving.
+						Product stamps of approval - As seen on TV! Or some official brand.
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/herschel-collection.png" alt="Johnny Cupcakes Homepage" class="stretch">
+					<small>
+						<a href="http://shop.herschelsupply.ca/" alt="Johnny Cupcakes">shop.herschelsupply.ca</a>
+					</small>
+					<aside class="notes">
+						Prett basic grid display.  As far as the collection goes this is standard.
+						Price, name, some filtering. Note: icon menu but has text labels.
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/johnny-cupcakes-filter.png" alt="Johnny Cupcakes Homepage" class="stretch">
+					<small>
+						<a href="http://johnnycupcakes.com/" alt="Johnny Cupcakes">johnnycupcakes.com</a>
+					</small>
+					<aside class="notes">
+						I want see all Girls shirts than come in green and are in the "Bake Sale" collection.
+						New in the grd: This option here where we can see different colors the same product
+						is available in.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Collections</h2>
+					<p>
+					 What else can our collection page do for us?
+					</p>
+					<ul class="fragment">
+						<li>Be more interactive - show me more pictures!</li>
+						<li>Lead to cart faster - save me clicks!</li>
+						<li>Be more visually diverse - I'm sick of boxes in rows!</li>
+					</ul>
+
+					<aside class="notes">
+						You can show all these items.  Anything else?
+						What about review scores? If on sale, show how much you're saving.
+						Product stamps of approval - As seen on TV! Or some official brand.
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/blackmilk-collection.png" alt="Black Milk Clothing" class="stretch">
+					<small>
+						<a href="https://blackmilkclothing.com/" alt="Black Milk Clothing">blackmilkclothing.com</a>
+					</small>
+					<aside class="notes">
+						In addition to providing more information about sizes, mousing over an
+						image will show a close up of the prodcut.
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/sovaj-quickview.png" alt="Sovoj Webiste" class="stretch">
+					<small>
+						<a href="http://sovajlife.com/" alt="Sovoj Life Website">sovajlife.com</a>
+					</small>
+					<aside class="notes">
+						There's actually no product information at all until I click on a product.
+						Then it's a quick view with a straight add to cart. I have the option of
+						going to the "full product dertails", but I could just as easily go back to browsing.
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/little-factory-masonry.png" alt="Little Factory" class="stretch">
+					<small>
+						<a href="http://littlefactory.com/" alt="Little Factory">littlefactory.com</a>
+					</small>
+					<aside class="notes">
+						This effect is often called masonry. Not everything has to be a clean grid.
+					</aside>
+				</section>
+
+				<section>
+					<h2>What else do we need?</h2>
+					<p>
+					 give a lit of common pages after asking group for they'd expect.
+					</p>
+					<ul class="fragment">
+						<li>Be more interactive - show me more pictures!</li>
+						<li>Lead to cart faster - save me clicks!</li>
+						<li>Be more visually diverse - I'm sick of boxes in rows!</li>
+					</ul>
+
+					<aside class="notes">
+						I'm not going to go into detail about these
+					</aside>
+				</section>
+
+				<section>
+					<h2>Often overlooked pages</h2>
+					<p>
+					 account, search, 404... show some 404 ones. Shop Jeen
+					</p>
+					<ul class="fragment">
+						<li>Be more interactive - show me more pictures!</li>
+						<li>Lead to cart faster - save me clicks!</li>
+						<li>Be more visually diverse - I'm sick of boxes in rows!</li>
+					</ul>
+
+					<aside class="notes">
+						I'm not going to go into detail about these
+					</aside>
+				</section>
+
+				<section class="slide__chapter" data-background="dist/images/templates3.png">
+					<h1>
+						Introduction to Liquid
+					</h1>
+					<h3>
+						Theme templating language
+					</h3>
+
+					<aside class="notes">
+						... Finish this section with a modification to Venture that changes
+						the product image on however. Going to use HTML and jQuery
+					</aside>
+				</section>
+
+				<section class="slide__chapter" data-background="dist/images/templates1.png">
+					<h1>
+						More advanced customizations
+					</h1>
+					<h3>
+						%@&# gets real
+					</h3>
+
+					<aside class="notes">
+						... Show Suzy Q cart... that's not on a cart page?!
+					</aside>
+				</section>
+
+				<section class="slide__chapter" data-background="dist/images/templates4.png">
+					<h1>
+						Workflow and tools
+					</h1>
+					<h3>
+						Let's up your development game
+					</h3>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section class="slide__chapter" data-background="dist/images/templates5.png">
+					<h1>
+						Where to go now
+					</h1>
+					<h3>
+						Resources and next steps
+					</h3>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section class="slide__chapter" data-background="dist/images/templates2.png">
+					<h1>
+						The end
+					</h1>
+
+					<aside class="notes">
+						...
+					</aside>
 				</section>
 
 			</div>

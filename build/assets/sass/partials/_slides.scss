@@ -2,3 +2,14 @@
   top: 50% !important;
   transform: translateY(-50%) !important;
 }
+
+.slide__agenda {
+  ul.agenda {
+    margin: 1em 0;
+    li {
+      list-style-type: none;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+  }
+}
