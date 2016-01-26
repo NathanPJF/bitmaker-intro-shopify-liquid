@@ -136,7 +136,7 @@ Thinking of flow:
 
 ## Design Patterns that make big impacts on conversions
 
-
+* Pass - not going to talk about this.
 
 ## Introduction to Liquid
 
@@ -190,6 +190,8 @@ Set theme settings.
 ### Alternate templates
 
 ### Alternative layout
+
+* NOT DOING THIS. To complex for limited time frame.
 
 * How to create and apply a new layout file.
   * When would I do this?

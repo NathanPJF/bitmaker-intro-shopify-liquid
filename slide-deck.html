@@ -62,6 +62,48 @@
 					</ul>
 				</section>
 
+				<section class="slide__chapter" data-background="dist/images/sales-channels.png">
+
+					<aside class="notes">
+						Shopify's mission: Make commerce better.
+
+						Shopify has its roots in selling products online, but since then it's
+						expanded to cover commerce, retail with POS and mobile app for iPhone and Android devices.
+						And social media with integrations with Facebook, Twitter and Pinterest.
+					</aside>
+				</section>
+
+				<section class="slide__chapter" data-background="dist/images/local-shops.png">
+
+					<aside class="notes">
+						When people think of Shopify they may think of small boutique shops.
+						These are actual shops in Ottawa where I'm from.
+					</aside>
+				</section>
+
+				<section class="slide__chapter stretch">
+					<img src="dist/images/bigger-brands.png" alt="Assortment of larger brands on Shopify">
+
+					<aside class="notes">
+						Larger brands on Shopify that have a more international reputation.
+					</aside>
+				</section>
+
+				<section class="slide__chapter" data-background="dist/images/kayne-west.jpg">
+
+					<aside class="notes">
+						Kanye West uses Shopify. Store is yeezy supply. All the boots and
+						shoes are sold out.
+					</aside>
+				</section>
+
+				<section class="slide__chapter" data-background="dist/images/hillary-podium.jpg">
+
+					<aside class="notes">
+						Not into Kanye? Hillary uses Shopify as well.
+					</aside>
+				</section>
+
 				<section class="slide__chapter" data-background="dist/images/templates2.png">
 					<h1>
 						Design for ecommerce
@@ -318,7 +360,7 @@
 				<section>
 					<h2>Often overlooked pages</h2>
 					<p>
-					 account, search, 404... show some 404 ones. Shop Jeen
+					 account, search, 404... show some 404 ones -> Shop Jeen
 					</p>
 					<ul class="fragment">
 						<li>Be more interactive - show me more pictures!</li>
@@ -336,12 +378,179 @@
 						Introduction to Liquid
 					</h1>
 					<h3>
-						Theme templating language
+						Templating language
 					</h3>
 
 					<aside class="notes">
 						... Finish this section with a modification to Venture that changes
 						the product image on however. Going to use HTML and jQuery
+					</aside>
+				</section>
+
+				<section>
+					<h2>Become a Shopify Partner</h2>
+					<p>
+						 To do: Walkthrough how to setup a partner account. Say that it's not
+						 crucial, but this is the way you can come back to your store as
+						 much as you want for editing.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Create a storefront</h2>
+					<p>
+						 To do: Choose the Venture theme.  Upload an attached CSV. Setup navigation.
+					</p>
+
+					<p>
+						 Just get the homepage set up and a couple collections. Tell them which ones
+						 to set up.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Online editor</h2>
+					<p>
+						 To do: screenshot on how to get to only editor. Tour of file structure.
+					</p>
+
+					<p>
+						 To do: Explain that HTML, CSS, SCSS, and JS work.
+					</p>
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Templates</h2>
+					<p>
+						 Walk through different templates. Index = home page, Product, Collection
+					</p>
+
+					<p>
+						 Reuse images from Ladies Learning Code.
+					</p>
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Task #1: Objects</h2>
+					<p>
+						 Checkout product.liquid, change the wrapped on the title from an
+						 h1 to an h2.  Tell them to use the docs.
+					</p>
+
+					<p>
+						 Add a h4 above the product description that says "More info"
+					</p>
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Task #2: Control flow tags</h2>
+					<p>
+						 After the description, let's loop through all the collections this product
+						 is part of.  "Collections: loop results".  Then let's change it so that
+						 if it's only part of one, don't do it.
+					</p>
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Task #3: Filters</h2>
+					<p>
+						 Let's make these collections actually link to the collection URL.
+						 Let's also make it all capitals with a filter.
+					</p>
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Snippets</h2>
+					<p>
+						 Look into featured-products snippet. Change something in it.
+					</p>
+
+					<p>
+						 Move some code from index.liquid into a snippet.  You can use snippets
+						 to just work "tidy up" your files.  If you find it overwhelming - it
+						 makes tracking down an unclosed element muuuuch easier.
+					</p>
+
+					<p>
+						 Snippets are often used for REUSABLE pieces of code. Point out where
+						 the product-card.liquid snippet is used.  Get group to tell you which lines.
+					</p>
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/toy-whale-related-products.png" alt="Toy Whale, related products" class="stretch">
+					<small>
+						<a href="http://toywhale.co/" alt="Toy Whale website">toywhale.co</a>
+					</small>
+					<aside class="notes">
+						It's common to see a listing of related products at the end of a prodcut page.
+						How will we decide what's "related"?
+					</aside>
+				</section>
+
+				<section>
+					<h2>Task #1</h2>
+					<p>
+						 Going to create a related products snippet.  Going to reuse the
+						 product-card.liquid snippet to show a row of related proucts at the end.
+					</p>
+
+					<p>
+						 Show screenshot of Toy Whale's related products.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Alternate templates</h2>
+					<p>
+						 Create alternate template for collection that has a big hero image
+						 above the product grid.  Give them the HTML, but not the liquid
+						 object. Just use the an <img> inside the page wrapper.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Task #2</h2>
+					<p>
+						 In Venture, get the home page to say how many items are in each collection.
+					</p>
+
+					<aside class="notes">
+						...
 					</aside>
 				</section>
 
@@ -358,6 +567,91 @@
 					</aside>
 				</section>
 
+				<section>
+					<h2>Image switching</h2>
+					<p>
+						 On the homepage: remove the "view" link. Then we'll make the image
+						 switch using javascript.  Like how Blackmilk does it.
+					</p>
+
+					<p>
+						 Give them the jquery to load.  HOT TIP: Why am I using jQuery and not CSS? So
+						 I don't load a bunch of images I may never display.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Line item properties</h2>
+					<p>
+						 Let's make a products more personal and let people have their name
+						 engraved on them.  All toques and snowboards (product type).
+					</p>
+
+					<p>
+						 We won't make an alternate template, just use an if statment.  At the
+						 end, we'll but it to make sure it works.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Test purchases</h2>
+					<p>
+						 Setting up bogus gateway for testing.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Theme settings</h2>
+					<p>
+						 TO DO: decide what task to do for this.
+					</p>
+
+					<p>
+						 Want it to be quick.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Ajax API</h2>
+					<p>
+						 Won't have time, but show them Suzy Q's cart.
+					</p>
+
+					<p>
+						 This isn't the cart page! It's just a page, so how are they doing it?
+						 Give link to ajax docs.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+				    <video class="stretch" controls>
+							<source src="dist/images/suzy-q-cart.mp4" type="video/mp4">
+						</video>
+						<small>
+							<a href="https://suzyq.ca/pages/store" alt="Suzy Q donuts">suzyq.ca</a>
+						</small>
+				</section>
+
 				<section class="slide__chapter" data-background="dist/images/templates4.png">
 					<h1>
 						Workflow and tools
@@ -366,6 +660,58 @@
 						Let's up your development game
 					</h3>
 
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Task runners</h2>
+					<p>
+					   Automate tasks or build your file structure.
+					</p>
+					<img src="dist/images/gulp-grunt.png" alt="Logos for Grunt and Gulp task runners">
+					<p>
+						Grunt (<a hfref="http://gulpjs.com/" alt="Gulp task runner">gruntjs.com</a>) or
+						Gulp (<a href="http://gruntjs.com/" alt="Gulp tack runner">gulpjs.com</a>)
+					</p>
+					<aside class="notes">
+						No reason you can have a build environment.  These slides use Grunt, which
+						has become less popular but has a superior logo.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Task runners</h2>
+					<p>
+						 To do: Screenshot of what our themes look like when we work on them.
+					</p>
+
+					<p>
+						 To do: Demo gulp build and gulp watch.
+					</p>
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>GitHub</h2>
+					<p>
+						 Mention deploy bot
+					</p>
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Theme Kit</h2>
+					<p>
+						 To do: Demo theme kit, theme download, theme watch.
+						 Screenshot of all the commands in terminal.
+					</p>
 					<aside class="notes">
 						...
 					</aside>
@@ -384,10 +730,39 @@
 					</aside>
 				</section>
 
+				<section>
+					<h2>Even more stuff</h2>
+					<p>
+						 Run through other things we didn't have time for: cart attributes,
+						 customer accounts, alternate layouts, translation settings, modifying checkout,
+						 app integration.
+					</p>
+
+					<p>
+						 Give links when I can
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<p>
+						 Links to Shopify blog, manual, etc.
+					</p>
+
+					<p>
+						 Talk about Expert program and Partners more.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
 				<section class="slide__chapter" data-background="dist/images/templates2.png">
-					<h1>
-						The end
-					</h1>
 
 					<aside class="notes">
 						...
@@ -413,6 +788,7 @@
 				history: true,
 				center: false,
 
+				backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
 				transition: 'none', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins

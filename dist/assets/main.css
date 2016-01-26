@@ -115,3 +115,19 @@ body {
   margin-bottom: 1em;
   text-align: center;
 }
+
+@media print {
+  .slide__chapter {
+    -webkit-transform: initial !important;
+            transform: initial !important;
+    top: 0 !important;
+  }
+  .slide__chapter h1, .slide__chapter h2 {
+    padding-top: 2em !important;
+  }
+
+  img {
+    max-width: 75% !important;
+    max-height: 75% !important;
+  }
+}

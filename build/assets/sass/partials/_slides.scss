@@ -13,3 +13,20 @@
     }
   }
 }
+
+// Change print CSS so ?print-pdf isn't messed up
+@media print {
+  .slide__chapter {
+    transform: initial !important;
+    top: 0 !important;
+
+    h1, h2 {
+      padding-top: 2em !important;
+    }
+  }
+
+  img {
+    max-width: 75% !important;
+    max-height: 75% !important;
+  }
+}
