@@ -65,7 +65,10 @@
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #30373B;
   font-weight: 200;
-  margin: 40px 0;
+  margin: 0 0 40px 0;
+}
+.reveal li {
+  margin-bottom: 10px;
 }
 .reveal blockquote {
   border: none;
@@ -94,6 +97,7 @@
 .reveal pre code {
   padding: 20px;
   line-height: 1.4;
+  font-size: 30px;
   background-color: #30373B;
 }
 

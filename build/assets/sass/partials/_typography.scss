@@ -1,5 +1,5 @@
 
-// Headings
+// Text elements
 .reveal {
   h1, h2 {
     @include headings(700, $brand_green);
@@ -19,7 +19,11 @@
     font-family: $body_font_family;
     color: $brand_grey;
     font-weight: 200;
-    margin: 40px 0;
+    margin: 0 0 40px 0;
+  }
+
+  li {
+    margin-bottom: 10px;
   }
 
   blockquote {
@@ -35,6 +39,8 @@
     margin: 10px 0;
   }
 }
+
+// Slides
 
 .slide__chapter {
   h1 {
@@ -57,6 +63,7 @@
   pre code {
     padding: 20px;
     line-height: 1.4;
+    font-size: 30px;
     background-color: $code_bg;
   }
 }
