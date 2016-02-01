@@ -559,6 +559,14 @@ Great country / rustic decor for the rooster collector.&lt;/p&gt;
 				</section>
 
 				<section>
+					<img src="dist/images/related-products-demo.png" alt="Demo store, related products" class="stretch">
+					<aside class="notes">
+						It's common to see a listing of related products at the end of a prodcut page.
+						How will we decide what's "related"?
+					</aside>
+				</section>
+
+				<section>
 					<h2>Task #1</h2>
 					<p>
 						 Going to create a related products snippet.  Going to reuse the
@@ -571,6 +579,48 @@ Great country / rustic decor for the rooster collector.&lt;/p&gt;
 
 					<aside class="notes">
 						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Initial step: Related products</h2>
+					<pre class=""><code data-trim class="html">
+&lt;div class="grid__related-products"&gt;
+ &lt;h2&gt;Related products&lt;/h2&gt;
+ &lt;div class="grid grid--no-gutters grid--uniform"&gt;
+   {% for product in product.collections.first.products limit: 5 %}
+    &lt;div class="grid__item small--one-half medium-up--one-fifth"&gt;
+     {% include 'product-card', product: product %}
+    &lt;/div&gt;
+   {% endfor %}
+ &lt;/div&gt;
+&lt;/div&gt;
+				</code></pre>
+					<aside class="notes">
+						Put a class on it to style it
+					</aside>
+				</section>
+
+				<section>
+					<h2>Final result: Related products</h2>
+					<pre class=""><code data-trim class="html">
+{% assign related_collection = product.collections.first.products | sort: 'price' %}
+
+{% if related_collection.size > 0 %}
+  &lt;div class="grid__related-products"&gt;
+   &lt;h2&gt;Related products&lt;/h2&gt;
+   &lt;div class="grid grid--no-gutters grid--uniform"&gt;
+     {% for product in related_collection limit: 5 %}
+      &lt;div class="grid__item small--one-half medium-up--one-fifth"&gt;
+        {% include 'product-card', product: product %}
+      &lt;/div&gt;
+     {% endfor %}
+   &lt;/div&gt;
+  &lt;/div&gt;
+{% endif %}
+				</code></pre>
+					<aside class="notes">
+						Put a class on it to style it
 					</aside>
 				</section>
 
