@@ -429,29 +429,164 @@ Great country / rustic decor for the rooster collector.&lt;/p&gt;
 				<section>
 					<h2>Task #1: Objects</h2>
 					<p>
-						 Checkout product.liquid, change the wrapped on the title from an
-						 h1 to an h2.  Tell them to use the docs.
+						 Learn about properties available to the <code>product</code> object
+						 posted in Shopify's documentation.
+					</p>
+					<p>
+						<a href="https://docs.shopify.com/themes/liquid-documentation/objects/product" alt="Documentation on the prodcut object">https://docs.shopify.com/themes/liquid-documentation/objects/product</a>
 					</p>
 
-					<p>
-						 Add a h4 above the product description that says "More info"
-					</p>
 					<aside class="notes">
-						...
+						Bookmark this page, as we'll be coming back to it a lot.  Learning how to
+						read docs is going to be very useful.
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/product-liquid-theme.png" alt="Screenshot of a product page" class="stretch">
+					<aside class="notes">
+						This is how we see the product page.
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/product-liquid-theme-overlay.png" alt="Product page with overlay identifying object properties" class="stretch">
+					<aside class="notes">
+						This is how Shopify sees your product page.
+					</aside>
+					<p>Properties of the <code>product</code> object.</p>
+				</section>
+
+				<section>
+					<img src="dist/images/variant-admin-view.png" alt="Screenshot of a variant page in the admin" class="stretch">
+					<aside class="notes">
+						This is how we see the variant admin page.
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/variant-admin-view-overlay.png" alt="Variant page with overlay identifying object properties" class="stretch">
+					<aside class="notes">
+						This is how Shopify sees your product page.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Task #1: Objects</h2>
+					<p>
+						 Make the following additions to the product page template:
+					</p>
+					<ul>
+						<li>Change the <code>&lt;h1&gt;</code> around the product's title to an <code>&lt;h2&gt;</code>.</li>
+						<li>Add <code>&lt;h4&gt;More info&lt;/h4&gt;</code> above the product description.</li>
+						<li>Add the product's type below the product description with the label <code>Type:</code></li>
+					</ul>
+					<aside class="notes">
+						Bookmark this page, as we'll be coming back to it a lot.  Learning how to
+						read docs is going to be very useful.
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/task-1-goal.png" alt="End result for task 1" class="stretch">
+					<aside class="notes">
+						This is the end goal.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Task #1: Solution</h2>
+
+					<pre class="fragment"><code data-trim class="html">
+// Product title
+&lt;h2 itemprop="name" class="product-single__title"&gt;{{ product.title }}&lt;/h2&gt;
+				</code></pre>
+
+				<pre class="fragment"><code data-trim class="html">
+// Product description
+&lt;div class="rte product-single__description" itemprop="description"&gt;
+  &lt;h4&gt;More info&lt;/h4&gt;
+  {{ product.description }}
+&lt;/div&gt;
+
+&lt;p&gt;Type: {{ product.type }}&lt;/p&gt;
+			</code></pre>
+
+					<aside class="notes">
+						I put Type outside of the div to give it some extra space.
 					</aside>
 				</section>
 
 				<section>
 					<h2>Task #2: Filters</h2>
 					<p>
-						 The vendor displaying on the product page can actually link to a page with
-						 all the vednor's stuff. Learn about filters.
+						 Filters modify whatever they are attached to.  There are a handful of types which you can learn about in the docs.
+					</p>
+					<p>
+						<a href="https://docs.shopify.com/themes/liquid-documentation/filters" alt="Documentation on filters">https://docs.shopify.com/themes/liquid-documentation/filters</a>
 					</p>
 
+<div class="fragment">
+					<pre class=""><code data-trim class="html">
+{{ object.property | filter }}
+				</code></pre>
+<p>
+	<em>Pro tip</em>: That line is called a "pipe".
+</div>
 					<aside class="notes">
 						...
 					</aside>
 				</section>
+
+				<section>
+					<h2>Types of filters</h2>
+
+					<p>
+						<b>String filters</b>: for when we want to modify words, sentences, titles, anything with characters.
+					</p>
+
+					<div class="fragment">
+<pre><code data-trim class="html">
+{{ 'HOW ARE YOU?' | downcase }}
+{{ product.handle | append: '.png' }}
+{{ article.author | replace: 'Nathan', 'Bob' }}
+</code></pre>
+					</div>
+
+					<div class="fragment">
+<pre><code data-trim class="html">
+how are you?
+fuzzy-boots.png
+Bob PJF
+</code></pre>
+					</div>
+
+			</section>
+
+			<section>
+				<h2>Types of filters</h2>
+
+				<p>
+					<b>URL filters</b>: for when you want to output the path to webpage or file.
+				</p>
+
+				<div class="fragment">
+<pre><code data-trim class="html">
+{{ 'logo.png' | asset_url }}
+{{ product.vendor | url_for_vendor }}
+{{ "Shop winter boots" | link_to_tag: 'Boots' }}
+</code></pre>
+				</div>
+
+				<div class="fragment">
+<pre><code data-trim class="html">
+//cdn.shopify.com/s/files/1/0087/0462/t/394/assets/logo.png?34423
+/collections/vendors?q=Burton
+&lt;a title=&quot;Show products matching tag Boots&quot; href=&quot;/collections/frontpage/boots&quot;&gt;Shop winter boots&lt;/a&gt;
+</code></pre>
+				</div>
+
+		</section>
 
 				<section>
 					<h2>Task #2: Linked product tags</h2>
@@ -886,34 +1021,34 @@ Great country / rustic decor for the rooster collector.&lt;/p&gt;
 				</section>
 
 				<section>
-					<h2>What else do we need?</h2>
+					<h2>Often overlooked pages</h2>
 					<p>
-					 give a lit of common pages after asking group for they'd expect.
+					 Pages that are often fall short by only offering the base requirements:
 					</p>
-					<ul class="fragment">
-						<li>Be more interactive - show me more pictures!</li>
-						<li>Lead to cart faster - save me clicks!</li>
-						<li>Be more visually diverse - I'm sick of boxes in rows!</li>
+					<ul class="">
+						<li>Search results</li>
+						<li>Customer account information</li>
+						<li>Order history</li>
+						<li>Password recovery</li>
+						<li>404 page</li>
 					</ul>
 
 					<aside class="notes">
-						I'm not going to go into detail about these
+						Search results - many just hide this entirely
+						Customer account information - finding and editing personal info is hard
+						Order history - limited order details, no re-order option
+						Password recovery - limited info on process
+						404 page - looks nothing like the rest of the site
 					</aside>
 				</section>
 
 				<section>
-					<h2>Often overlooked pages</h2>
-					<p>
-					 account, search, 404... show some 404 ones -> Shop Jeen
-					</p>
-					<ul class="fragment">
-						<li>Be more interactive - show me more pictures!</li>
-						<li>Lead to cart faster - save me clicks!</li>
-						<li>Be more visually diverse - I'm sick of boxes in rows!</li>
-					</ul>
-
+					<img src="dist/images/shop-jeen-404.png" alt="404 page" class="stretch">
+					<small>
+						<a href="http://shopjeen.com" alt="Shop Jeen">shopjeen.com</a>
+					</small>
 					<aside class="notes">
-						I'm not going to go into detail about these
+						At the very least, give it some personality
 					</aside>
 				</section>
 
@@ -978,11 +1113,11 @@ Great country / rustic decor for the rooster collector.&lt;/p&gt;
 				<section>
 					<h2>Theme settings</h2>
 					<p>
-						 TO DO: decide what task to do for this.
+						 Make a theme setting to turn the tags displayed on product pages on and off.
 					</p>
 
 					<p>
-						 Want it to be quick.
+						 The thing we tried to do waaaay back at the beginning.
 					</p>
 
 					<aside class="notes">
