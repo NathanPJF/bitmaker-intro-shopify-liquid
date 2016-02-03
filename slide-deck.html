@@ -588,13 +588,51 @@ Bob PJF
 
 		</section>
 
+			<section>
+				<h2>Task #2: Filters</h2>
+				<p>
+					 Using filters:
+				</p>
+				<ul>
+					<li>Have the product vendor link to a collection of products from that vendor.</li>
+					<li>Have the product type link to a collection of products of that type.</li>
+				</ul>
+
+				<aside class="notes">
+					...
+				</aside>
+			</section>
+
+			<section>
+				<img src="dist/images/task-2-goal.png" alt="Goal for filter task" class="stretch">
+
+				<aside class="notes">
+					...
+				</aside>
+			</section>
+
+			<section>
+				<img src="dist/images/thumbs-up-robot.gif" alt="Robot trying earnestly to give a thumbs up" class="stretch">
+
+				<aside class="notes">
+					...
+				</aside>
+			</section>
+
 				<section>
-					<h2>Task #2: Linked product tags</h2>
+					<h2>Task #3: Linked product tags</h2>
 					<p>
-						 Output a list of product tags after the description.  Each tag should be capitalized and
-						 link to a collection of products with that same tag.
+						 Output a list of product tags after the description.  Each tag must:
 					</p>
-					<img src="dist/images/tagged-product-links.png" alt="Product page with tags pointed out" class="stretch">
+					<ul>
+						<li>start with a capital letter, and</li>
+						<li>link to a collection of products with that same tag</li>
+					</ul>
+				  <br>
+					<br>
+					<p>
+						 <em>Note</em>: We'll look at the product "Andie" since it already has some tags.
+					</p>
 
 					<aside class="notes">
 						...
@@ -602,83 +640,209 @@ Bob PJF
 				</section>
 
 				<section>
-					<h2>Task #2: Iteration tags</h2>
-					<p>
-						 Learn about <a href="https://docs.shopify.com/themes/liquid-documentation/tags/iteration-tags" alt="Iteration tags">Iteration tags</a>
-						 in the docs here.
-					</p>
+					<img src="dist/images/task-3-goal.png" alt="Product page with tags pointed out" class="stretch">
+
 					<aside class="notes">
 						...
 					</aside>
 				</section>
 
 				<section>
-					<h2>Task #2: Iteration tags</h2>
-					<p>Write a for-loop that outputs each tag the product has.</p>
+					<h2>Iteration tags</h2>
+					<p>
+						 To loop through tags, we'll need to know about <a href="https://docs.shopify.com/themes/liquid-documentation/tags/iteration-tags" alt="Iteration tags">Iteration tags</a>.
+					</p>
 
-				<pre class=""><code data-trim class="html">
-&lt;div&gt;
+					<div class="fragment">
+						<p class="">
+							 <b>Task</b>: Write a for-loop that outputs each tag the product has.
+						</p>
+
+						<pre class=""><code data-trim class="html">
+&lt;div class="product-single__tags"&gt;
+  &lt;p&gt;Tags:
+    // for-loop here...
+  &lt;/p&gt;
+&lt;/div&gt;
+					</code></pre>
+				</div>
+
+					<aside class="notes">
+						Solution on next slide.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Solution</h2>
+					<div class="fragment">
+
+					<p class="">
+						 Just with liquid output, no link filter yet.
+					</p>
+
+					<pre class=""><code data-trim class="html">
+&lt;div class="product-single__tags"&gt;
   &lt;p&gt;Tags:
     {% for tag in product.tags %}
-      {{ tag }},
+      {{ tag | capitalize | link_to: ??? }},
     {% endfor %}
   &lt;/p&gt;
 &lt;/div&gt;
+				</code></pre>
+				<br>
+				<p class="">
+					 What are we linking to?  Why doesn't <code>link_to_tag</code> work?
+				</p>
+			</div>
+
+				<aside class="notes">
+					Link to tag assumes you're on a collection page. But we aren't, so we need to specify the collection.
+				</aside>
+			</section>
+
+			<section>
+				<h2>Variable tags</h2>
+				<p>
+					 Learn about <a href="https://docs.shopify.com/themes/liquid-documentation/tags/variable-tags" alt="Variable tags">Variable tags</a> here.
+				</p>
+
+				<div class="fragment">
+					<p class="">
+						 <b>Task</b>: Set a variable to the URL of the entire product catalog.
+					</p>
+
+					<pre class=""><code data-trim class="html">
+&lt;div class="product-single__tags"&gt;
+  &lt;p&gt;Tags:
+   {% for tag in product.tags %}
+     // set a variable to '/collections/all/' and append tag
+     {{ tag | capitalize | link_to: variable }},
+   {% endfor %}
+  &lt;/p&gt;
+&lt;/div&gt;
+				</code></pre>
+			</div>
+
+				<aside class="notes">
+					Solution on next slide.
+				</aside>
+			</section>
+
+			<section>
+				<h2>Solution</h2>
+				<div class="fragment">
+
+				<pre class=""><code data-trim class="html">
+&lt;div class="product-single__tags"&gt;
+ &lt;p&gt;Tags:
+  {% for tag in product.tags %}
+    {% assign tag_coll = '/collections/all/' | append: tag %}
+    {{ tag | capitalize | link_to: tag_coll }},
+  {% endfor %}
+ &lt;/p&gt;
+&lt;/div&gt;
 			</code></pre>
-					<aside class="notes">
-						...
-					</aside>
-				</section>
+			<br>
+			<p class="">
+				 What about when there aren't any product tags? Also, how do we not show that last comma?
+			</p>
+		</div>
+
+			<aside class="notes">
+				Solution on next slide.
+			</aside>
+		</section>
+
+		<section>
+			<h2>Control flow tags</h2>
+			<p>
+				 Also known as "conditional statements", read the documentation about <a href="https://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags" alt="Control flow tags documentation">Control flow tags</a> here.
+			</p>
+
+			<div class="fragment">
+				<p class="">
+					 <b>Task</b>: Two things to complete
+				</p>
+				<ul>
+					<li>Wrap the entire for-loop in a check whether there are any tags at all.  Hint: <code>product.tags.size</code>.</li>
+					<li>Display the comma only when we aren't on the last iteration for the for-loop. Hint: <code>forloop</code> is an object.</li>
+				</ul>
+		</div>
+
+			<aside class="notes">
+				Solution on next slide.
+			</aside>
+		</section>
 
 				<section>
 					<h2>Final result: Control flow tags</h2>
+					<div class="fragment">
 				<pre class=""><code data-trim class="html">
 {% if product.tags.size > 0 %}
-  {% assign all_collection = '/collections/all/' %}
-  &lt;div&gt;
-    &lt;p&gt; Tags:
+  &lt;div class="product-single__tags"&gt;
+    &lt;p&gt;Tags:
     {% for tag in product.tags %}
-      {% assign filtered_collection = all_collection | append: tag %}
-      {{ tag | capitalize | link_to: filtered_collection  }}{% unless forloop.last %},{% endunless %}
+      {% assign tag_coll = '/collections/all/' | append: tag %}
+      {{ tag | capitalize | link_to: tag_coll }}{% unless forloop.last %},{% endunless %}
     {% endfor %}
     &lt;/p&gt;
   &lt;/div&gt;
 {% endif %}
 			</code></pre>
+		</div>
 					<aside class="notes">
 						...
 					</aside>
 				</section>
 
 				<section>
-					<h2>Task #3: Filters</h2>
-					<p>
-						 Let's make these collections actually link to the collection URL.
-						 Let's also make it all capitals with a filter.
-					</p>
+					<h3>That... was a lot of liquid.</h3>
+					<img src="dist/images/eric-drowning.gif" alt="Prince Eric coming out of ocean" class="stretch">
 					<aside class="notes">
-						...
+						We just covered Liquid Object, Filters, Control flow tags, Iteration tags, and variable tags.
+						There's one more tag group though... and it's going to save you A LOT of typing.
 					</aside>
 				</section>
 
 				<section>
 					<h2>Snippets</h2>
 					<p>
-						 Look into featured-products snippet. Change something in it.
+						 In our folder structure, there's a Snippets directory.
 					</p>
 
 					<p>
-						 Move some code from index.liquid into a snippet.  You can use snippets
-						 to just work "tidy up" your files.  If you find it overwhelming - it
-						 makes tracking down an unclosed element muuuuch easier.
+						 Snippets help with two things:
 					</p>
 
-					<p>
-						 Snippets are often used for REUSABLE pieces of code. Point out where
-						 the product-card.liquid snippet is used.  Get group to tell you which lines.
-					</p>
+					<ul>
+						<li>Reusing and repurposing lines of code.</li>
+						<li>Help organize long templates into just a handful of snippets.</li>
+					</ul>
+
 					<aside class="notes">
 						...
+					</aside>
+				</section>
+
+				<section>
+					<img src="dist/images/collection-page.png" alt="Collection page example" class="stretch">
+					<p>
+						Where do you see repetition in <code>collection.liquid</code>?
+					</p>
+					<aside class="notes">
+						The pattern seen in products is repeated multiple times. Image, price, title.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Theme tags</h2>
+					<p>Check out the docs on <a href="https://docs.shopify.com/themes/liquid-documentation/tags/theme-tags" alt="Documentation
+						on liquid theme tags">Theme tags</a> to learn about the <code>include</code> tag.
+					</p>
+					<img src="dist/images/include-line-in-collection.png" alt="Using include tag in collection.liquid" class="stretch">
+
+					<aside class="notes">
+						Have group open up the product-card snippet.
 					</aside>
 				</section>
 
@@ -688,8 +852,23 @@ Bob PJF
 						<a href="http://toywhale.co/" alt="Toy Whale website">toywhale.co</a>
 					</small>
 					<aside class="notes">
-						It's common to see a listing of related products at the end of a prodcut page.
+						It's common to see a listing of related products at the end of a product page.
 						How will we decide what's "related"?
+					</aside>
+				</section>
+
+				<section>
+					<h2>Task #4: Related products</h2>
+					<p>
+						 List related products at the bottom of the product page.
+					</p>
+					<ul>
+						<li>Maximum of five products listed, and</li>
+						<li>All related products must share the same collection.</li>
+					</ul>
+
+					<aside class="notes">
+						...
 					</aside>
 				</section>
 
@@ -702,18 +881,25 @@ Bob PJF
 				</section>
 
 				<section>
-					<h2>Task #1</h2>
-					<p>
-						 Going to create a related products snippet.  Going to reuse the
-						 product-card.liquid snippet to show a row of related proucts at the end.
-					</p>
-
-					<p>
-						 Show screenshot of Toy Whale's related products.
-					</p>
-
+					<h2>Initial step: Related products</h2>
+					<pre class=""><code data-trim class="html">
+&lt;div class="grid__related-products"&gt;
+ &lt;h2&gt;Related products&lt;/h2&gt;
+ &lt;div class="grid grid--no-gutters grid--uniform"&gt;
+   {% for ... %}
+    &lt;div class="grid__item small--one-half medium-up--one-fifth"&gt;
+     // include the 'product-card' snippet
+    &lt;/div&gt;
+   {% endfor %}
+ &lt;/div&gt;
+&lt;/div&gt;
+				</code></pre>
+				<br>
+				<p>
+					How do we know what collections are available to the product?
+				</p>
 					<aside class="notes">
-						...
+						Look in the docs at the product object.
 					</aside>
 				</section>
 
@@ -723,7 +909,7 @@ Bob PJF
 &lt;div class="grid__related-products"&gt;
  &lt;h2&gt;Related products&lt;/h2&gt;
  &lt;div class="grid grid--no-gutters grid--uniform"&gt;
-   {% for product in product.collections.first.products limit: 5 %}
+   {% for product in product.collections.first.products %}
     &lt;div class="grid__item small--one-half medium-up--one-fifth"&gt;
      {% include 'product-card', product: product %}
     &lt;/div&gt;
@@ -731,6 +917,11 @@ Bob PJF
  &lt;/div&gt;
 &lt;/div&gt;
 				</code></pre>
+				<br>
+				<p>
+					How can we control the number of products displayed?
+				</p>
+
 					<aside class="notes">
 						Put a class on it to style it
 					</aside>
@@ -760,27 +951,7 @@ Bob PJF
 				</section>
 
 				<section>
-					<h2>Alternate templates</h2>
-					<p>
-						 Create alternate template for collection that has a big hero image
-						 above the product grid.  Give them the HTML, but not the liquid
-						 object. Just use the an &lt;img&gt; inside the page wrapper.
-					</p>
-
-					<aside class="notes">
-						...
-					</aside>
-				</section>
-
-				<section>
-					<h2>Task #2</h2>
-					<p>
-						 In Venture, get the home page to say how many items are in each collection.
-					</p>
-
-					<aside class="notes">
-						...
-					</aside>
+					<img class="stretch" src="dist/images/coconut-relax.gif" alt="Relax on beach">
 				</section>
 
 				<section class="slide__chapter" data-background="dist/images/templates2.png">
@@ -1103,6 +1274,19 @@ Bob PJF
 					<h2>Test purchases</h2>
 					<p>
 						 Setting up bogus gateway for testing.
+					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Alternate templates</h2>
+					<p>
+						 Create alternate template for collection that has a big hero image
+						 above the product grid.  Give them the HTML, but not the liquid
+						 object. Just use the an &lt;img&gt; inside the page wrapper.
 					</p>
 
 					<aside class="notes">
