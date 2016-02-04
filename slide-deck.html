@@ -1256,14 +1256,40 @@ Bob PJF
 				<section>
 					<h2>Line item properties</h2>
 					<p>
-						 Let's make a products more personal and let people have their name
-						 engraved on them.  All toques and snowboards (product type).
+						 Attach additional information to individual cart items:
+					</p>
+					<ul>
+						<li>Make your product's customizable</li>
+						<li>Ask customers delivery or wrapping instructions</li>
+						<li>Trigger options at the cart page</li>
+					</ul>
+					
+					<p>
+						This is made possible via <a href="https://docs.shopify.com/manual/configuration/store-customization/page-specific/product-page/get-customization-information-for-products" alt="Manual on Line item properties">line item properties</a>.
 					</p>
 
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Line item properties</h2>
+					<img src="dist/images/engraving-example.png" alt="Example of product page using line item properties" class="stretch">
+				</section>
+
+				<section>
+					<h2>Line item properties</h2>
 					<p>
-						 We won't make an alternate template, just use an if statment.  At the
-						 end, we'll but it to make sure it works.
+						 Insert the code below into <code>product.liquid</code> before the 
+						 submit button.
 					</p>
+					<pre class=""><code data-trim class="html">
+&lt;div class="product-form__item product-form__item--lip"&gt;
+  &lt;label for="Engraving"&gt;Engraving&lt;/label&gt;
+  &lt;input type="text" id="engraving" name="properties[Engraving]"&gt;
+&lt;/div&gt;
+				</code></pre>
 
 					<aside class="notes">
 						...
@@ -1273,9 +1299,41 @@ Bob PJF
 				<section>
 					<h2>Test purchases</h2>
 					<p>
-						 Setting up bogus gateway for testing.
+						 You may want to try test orders in your store for a number of reasons:
 					</p>
+					<ul>
+              <li>See order <a href="https://docs.shopify.com/manual/settings/notifications">confirmation emails</a>.</li>
+              <li>Trying out <a href="https://docs.shopify.com/manual/configuration/store-customization/page-specific/cart-page/add-a-gift-wrap-option">cart modifications</a>.</li>
+              <li>Customizing a <a href="https://docs.shopify.com/manual/configuration/store-customization/page-specific/checkout-page/thankyou-page">Order status page</a>.</li>
+          </ul>
+					
+					<p>The <b>best way</b> to do that in a development shop is by activating the <a href="https://docs.shopify.com/manual/your-store/orders/test-orders#bogus-gateway">Bogus Gateway</a>.</p>
 
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Test purchases</h2>
+					<p>From your dashboard, fo to <b>Settings</b> &gt; <b>Payments</b></p>
+					<p>Set "(for testing) Bogus Gateway" as your payment gateway.</p>
+					<img alt="Bogus Gateway Setup" src="dist/images/bogus-gateway-setup.png" class="center">
+					
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Test purchases</h2>
+					<p><b>Task</b>: Buy something.</p>
+					<ul>
+              <li>Credit card number: 1</li>
+              <li>CVC: 111</li>
+              <li>Expiry Date: Any time in the future.</li>
+          </ul>
+										
 					<aside class="notes">
 						...
 					</aside>
@@ -1284,10 +1342,17 @@ Bob PJF
 				<section>
 					<h2>Alternate templates</h2>
 					<p>
-						 Create alternate template for collection that has a big hero image
-						 above the product grid.  Give them the HTML, but not the liquid
-						 object. Just use the an &lt;img&gt; inside the page wrapper.
+						 Control which products get certain features.
 					</p>
+					
+					<p>
+						<b>Task</b>: Make just one product have the engraving customization.
+					</p>
+					
+					<div class="fragment">
+						<img  src="dist/images/product-engraving.png" class="center">
+						<p>... then remove your change from <code>product.liquid</code></p>
+					</div>
 
 					<aside class="notes">
 						...
@@ -1312,13 +1377,16 @@ Bob PJF
 				<section>
 					<h2>Ajax API</h2>
 					<p>
-						 Won't have time, but show them Suzy Q's cart.
-					</p>
-
+						 Shopify has an ajax API that allow cart manipulation: <a href="https://docs.shopify.com/support/your-website/themes/can-i-use-ajax-api">Shopify's Ajax API</a>
+					</p>					
 					<p>
-						 This isn't the cart page! It's just a page, so how are they doing it?
-						 Give link to ajax docs.
+						There is a "globably hosted" jQuery library supported by Shopify available.
 					</p>
+					<br>
+					<pre class=""><code data-trim class="html">					
+{{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}
+{{ 'api.jquery.js' | shopify_asset_url | script_tag }}
+					</code></pre>
 
 					<aside class="notes">
 						...
@@ -1366,12 +1434,10 @@ Bob PJF
 
 				<section>
 					<h2>Task runners</h2>
-					<p>
-						 To do: Screenshot of what our themes look like when we work on them.
-					</p>
+					<img src="dist/images/venture-build.png" class="stretch" alt="Showing Venture theme build files">
 
 					<p>
-						 To do: Demo gulp build and gulp watch.
+						 Demo: <code>gulp zip</code>
 					</p>
 					<aside class="notes">
 						...
@@ -1379,20 +1445,32 @@ Bob PJF
 				</section>
 
 				<section>
-					<h2>GitHub</h2>
+					<h2>Version control</h2>
+					
 					<p>
-						 Mention deploy bot
+						No out-of-the-box integration for repository services like GitHub.
 					</p>
-					<aside class="notes">
-						...
-					</aside>
+					
+					<p>Beanstalk and DeployBot offer automatic integrations to help ship/deploy your code changes.<p>
+						
+					<p>Awesome guest blog post on Shopify's Partner blog about integrations: 
+				  	<a href="https://www.shopify.com/partners/blog/19752835-using-git-to-simplify-shopify-theme-deployment" alt="Partner blog post">Using Git to Simplify Shopify Theme Deployment</a>
+					</p> 
+
 				</section>
 
 				<section>
 					<h2>Theme Kit</h2>
 					<p>
-						 To do: Demo theme kit, theme download, theme watch.
-						 Screenshot of all the commands in terminal.
+						 Forget third parties; do it yourself!
+					</p>
+					
+					<p>
+						Theme Kit: a tool you can install locally that integrates with your private app. 
+					</p>
+					
+					<p>
+						<a href="http://themekit.cat/" alt="Theme Kit website">themekit.cat</a>
 					</p>
 					<aside class="notes">
 						...
@@ -1415,14 +1493,17 @@ Bob PJF
 				<section>
 					<h2>Even more stuff</h2>
 					<p>
-						 Run through other things we didn't have time for: cart attributes,
-						 customer accounts, alternate layouts, translation settings, modifying checkout,
-						 app integration.
+						 More advanced topics you can explore:
 					</p>
-
-					<p>
-						 Give links when I can
-					</p>
+					
+					<ul>
+						<li>cart attributes</li>
+						<li>customer accounts</li>
+						<li>alternate layouts</li>
+						<li>translation settings</li>
+						<li>modifying checkout</li>
+						<li>app integration</li>
+					</ul>
 
 					<aside class="notes">
 						...
@@ -1431,13 +1512,33 @@ Bob PJF
 
 				<section>
 					<h2>Resources</h2>
-					<p>
-						 Links to Shopify blog, manual, etc.
-					</p>
 
+					<ul>
+						<li><p><a href="https://docs.shopify.com/themes/liquid-documentation/basics">Shopify Liquid documentation</a>: Examples and use-cases</p>
+						</li>
+						<li><p><a href="https://ecommerce.shopify.com/forums">Shopify forums</a>: Answers from Shopify employees, Experts, and other Partners</p>
+						</li>
+						<li><p><a href="http://cheat.markdunkley.com/">Mark Dunkley's Cheat Sheet</a>: Most common Liquid items at a glance</p>
+						</li>
+						<li><p><a href="http://www.shopify.com/partners/blog">Shopify Partners Blog</a>: Designing, developing and selling with Shopify</p>
+						</li>
+					</ul>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+				
+				<section>
+					<h2>More Partner stuff</h2>
+					
 					<p>
-						 Talk about Expert program and Partners more.
+						If you're looking to dive further into the Partner program
 					</p>
+					<ul>
+            <li><a href="https://docs.shopify.com/partners/partner-resources/for-partners/let-people-know">Branding yourself</a> as a Partner</li>
+            <li>Become a <a href="https://experts.shopify.com/setup-experts">Setup Expert</a> after 5 shops</li>
+          </ul>
 
 					<aside class="notes">
 						...
