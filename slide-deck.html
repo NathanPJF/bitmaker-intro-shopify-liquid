@@ -1236,7 +1236,7 @@ Bob PJF
 					</aside>
 				</section>
 
-				<section>
+				<!-- <section>
 					<h2>Image switching</h2>
 					<p>
 						 On the homepage: remove the "view" link. Then we'll make the image
@@ -1251,7 +1251,7 @@ Bob PJF
 					<aside class="notes">
 						...
 					</aside>
-				</section>
+				</section> -->
 
 				<section>
 					<h2>Line item properties</h2>
@@ -1364,10 +1364,40 @@ Bob PJF
 					<p>
 						 Make a theme setting to turn the tags displayed on product pages on and off.
 					</p>
-
+					<pre class=""><code data-trim class="json">					
+{
+  "name": "Product page",
+  "settings": [
+    {
+      // ...
+    },
+    {
+      "type": "checkbox",
+      "id": "product_page_tags_enable",
+      "label": "Show tags"
+    }
+  ]
+},
+</code></pre>
 					<p>
-						 The thing we tried to do waaaay back at the beginning.
+						 In Config folder, find <code>settings_schema.json</code>
 					</p>
+
+					<aside class="notes">
+						...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Theme settings</h2>
+					<p>
+						 Wrap our previous code in an if-statment
+					</p>
+					<pre class=""><code data-trim class="json">					
+{% if settings.product_page_tags_enable %}
+  // code for product tags
+{% endif %}
+</code></pre>
 
 					<aside class="notes">
 						...
